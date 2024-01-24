@@ -1,7 +1,61 @@
 <?php
     include_once("templates/header.php");
 ?>
-<h1>Testando agenda</h1>
+  <div class="container">
+    <?php
+    if(isset($print_msg) && $print_msg!=''): ?>
+    <p id="msg"> <?=$print_msg?> </p>
+    <?php endif;?>
+
+    <h1 id="main-title">Minha agenda</h1>
+    <?php  if(count($contatos)>0):?>
+        <table class="table" id="contacts-table">
+            <thread>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">nome</th>
+                    <th scope="col">telefone</th>
+                    <th scope="col"></th>
+                </tr>
+            </thread>
+
+
+
+            <tbody>
+                <?php  foreach($contatos as $contato):   ?>
+
+                    <tr>
+                        <td scope="col"> <?= $contato['id'];?>  </td>
+                        <td scope="col"> <?= $contato['nome'];?>  </td>
+                        <td scope="col"> <?= $contato['telefone'];?>  </td>
+                        <td class="actions"> 
+                        <a href=""> <i class="fas fa-eye check-icon"></i>    </a>
+                        <a href=""> <i class="far fa-edit edit-icon"></i>    </a>
+                        <button type="submit"> <i class="fas fa-times delete-icon"></i> </button>
+                    
+
+                    
+                    
+                    </td>
+                    </tr>
+
+
+                    <?php endforeach;?>
+            </tbody>
+        </table>
+    <?php else:
+        ?>
+        <p id="empty-list-text">Ainda não há contatos, <a href="<?=$BASE_URL?>create.php">
+    clique para adicionar</a>.</p>
+
+    <?php endif;?>
+
+    
+
+      
+      
+
+  </div>
 
 
 
