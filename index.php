@@ -31,8 +31,13 @@
                         <td class="actions"> 
                         <a href="<?=$BASE_URL?>show.php?id=<?= $contato['id'];?>"> <i class="fas fa-eye check-icon"></i>    </a>
                         <a href="<?=$BASE_URL?>edit.php?id=<?= $contato['id'];?>"> <i class="far fa-edit edit-icon"></i>    </a>
+                       
+                        <form class="delete-form" action="<?=$BASE_URL?>/config/process.php" method="POST">
+                            <input type="hidden" name="type" value="delete">
+                            <input type="hidden" name="id" value="<?= $contato['id'];?>">
                         <button type="submit" class="delete-btn"> <i class="fas fa-times delete-icon"></i> </button>
                     
+                        </form>
 
                     
                     

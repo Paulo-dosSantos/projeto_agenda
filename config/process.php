@@ -67,7 +67,27 @@ if(!empty($data)){
 
     }
    
-    //seleção de dados
+    else if($data['type']==='delete'){
+        $id=$data['id'];
+        $query= "DELETE  FROM contatos WHERE id=:id";
+        $stmt=$conn->prepare($query);
+        $stmt->bindParam(":id",$id);
+
+        try{
+            $stmt->execute();
+            $_SESSION["msg"]="Contato removido com sucesso";
+            
+        }
+        catch(PDOException $e){
+            //erro na conexão
+            $error= $e->getMessage();
+            echo "erro: $error";
+    
+        }
+        header("Location:".$BASE_URL.'../index.php');
+
+    }
+
 
 }
  
