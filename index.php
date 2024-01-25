@@ -29,7 +29,7 @@
                         <td scope="col"> <?= $contato['nome'];?>  </td>
                         <td scope="col"> <?= $contato['telefone'];?>  </td>
                         <td class="actions"> 
-                        <a href=""> <i class="fas fa-eye check-icon"></i>    </a>
+                        <a href="<?=$BASE_URL?>show.php?id=<?= $contato['id'];?>"> <i class="fas fa-eye check-icon"></i>    </a>
                         <a href=""> <i class="far fa-edit edit-icon"></i>    </a>
                         <button type="submit" class="delete-btn"> <i class="fas fa-times delete-icon"></i> </button>
                     

@@ -52,3 +52,27 @@
 .col-id{
     font-weight: bold;
 }
+
+/*show*/
+#view-contact-container{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.bold{
+    font-weight: bold;
+}
+#back-link-container{
+    display: block;
+    width: 500px;
+    margin: 30px 0 auto;
+
+}
+#back-link{
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+    color:#007BFF;
+    padding: 5px;
+}
+#back-link:hover{
+    text-decoration: none;
+}
