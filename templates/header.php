@@ -41,7 +41,7 @@
        <div>
        <div class="navbar-nav">
             <a class="nav-link active" href="index.php" id="home-link">Agenda</a>
-            <a class="nav-link active" href="create.php" id="home-link">Adicionar contato</a>
+            <a class="nav-link active" href="create.php" >Adicionar contato</a>
         </div>
        </div>
     </nav>
